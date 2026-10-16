@@ -4,8 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        MyHashSet set = new MyHashSet();
-
+        MyHashSet<Lehrperson> set = new MyHashSet<Lehrperson>();
+        MyHashSet<int> set2 = new MyHashSet<int>();
+        
+        
         Lehrperson anna = new Lehrperson("Anna", "Huber", new DateTime(1980, 3, 12), Unterrichtsfach.Informatik, 18);
         Lehrperson anna2 = new Lehrperson("Anna", "Petrovic", new DateTime(1977, 5, 4), Unterrichtsfach.Informatik, 18);
         Lehrperson jose = new Lehrperson("José", "Rojas", new DateTime(1975, 11, 5), Unterrichtsfach.Mathematik, 20);
@@ -16,6 +18,13 @@ class Program
         set.Add(jose);
         set.Add(shirin);
 
+        set2.Add(1);
+        set2.Add(10);
+        set2.Add(7);
+        set2.Add(13);
+        set2.Add(19);
+        set2.Add(3);
+        
         Console.WriteLine($"\nCount: {set.Count}, Capacity: {set.Capacity}");
         Console.WriteLine(set);
     }
